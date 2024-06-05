@@ -1,4 +1,4 @@
-StASE has two major components:
+STASE has two major components:
 
 
 
