@@ -3,12 +3,11 @@
 ## Step-1: Install KLEE Symbolic Execution Engine 
 STASE uses KLEE as the underlying symbolic execution engine. Follow [these steps](install_klee.md) to install KLEE. These steps were tested on LLVM 13/14, Z3 constraint solver, and  Ubuntu (22.04 LTS and 23.10). 
 
-## Step-2: Clone edk2 source code
+## Step-2: Clone edk2 source code inside stase-edk2 directory
 ```
 cd stase-edk2
-git clone https://github.com/tianocore/edk2.git
+git clone <Your edk2 repo>
 cd edk2
-git checkout tags/edk2-stable202311
 cd ..
 ```
 
