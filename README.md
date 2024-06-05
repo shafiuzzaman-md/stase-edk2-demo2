@@ -2,7 +2,7 @@ STASE has two major components:
 
 
 
-# Rule-based Static Analysis
+# 1. Rule-based Static Analysis
 
 ## Step-1: Install cclyzerpp & Souffle 
 STASE uses cclyzerpp+Souffle tool for rule-based static analysis. Follow [these steps](install_sa.md) to install cclyzerpp and Souffle. These steps were tested on LLVM 14 and Ubuntu (22.04 LTS). 
@@ -41,7 +41,7 @@ souffle --no-warn -j 32 -F ./<filename>_facts/ -D ./<filename>_analysis/ ./edk2-
 
 
 
-# Guided Symbolic Execution
+# 2. Guided Symbolic Execution
 
 ## Step-1: Install KLEE Symbolic Execution Engine 
 STASE uses KLEE as the underlying symbolic execution engine. Follow [these steps](install_klee.md) to install KLEE. These steps were tested on LLVM 13/14, Z3 constraint solver, and  Ubuntu (22.04 LTS and 23.10). 
