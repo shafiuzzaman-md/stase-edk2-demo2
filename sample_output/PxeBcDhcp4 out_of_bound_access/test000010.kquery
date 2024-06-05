@@ -1,0 +1,72 @@
+array IsPxeOffer[1] : w32 -> w8 = symbolic
+array Private->DhcpAck.Dhcp4->OptList[8] : w32 -> w8 = symbolic
+array Private->SelectIndex[4] : w32 -> w8 = symbolic
+array Status[8] : w32 -> w8 = symbolic
+array const_arr22[8] : w32 -> w8 = [112 226 223 142 26 124 0 0]
+(query [(Eq 255
+             (ReadLSB w32 0 Private->SelectIndex))
+         (Eq false
+             (Slt (ReadLSB w64 0 Status)
+                  0))
+         (Eq false
+             (Eq 0 (Read w8 0 IsPxeOffer)))
+         (Eq false
+             (Eq 0
+                 N0:(ReadLSB w64 0 Private->DhcpAck.Dhcp4->OptList)))
+         (Eq false
+             (Ult (Add w64 18446608581737316353 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608581200445441 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608580663574529 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608579052961793 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608576905478145 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608574757994497 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608574221123585 N0) 1))
+         (Eq false
+             (Ult (Add w64 18446608573415817217 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608573147381761 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608572610510849 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608572073639937 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608571536769025 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608570999898113 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608570463027201 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608569926156289 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608569389285377 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608568852414465 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608568315543553 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608567778672641 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608566704930817 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608566168059905 N0) 4))
+         (Eq false
+             (Ult (Add w64 18446608565631188993 N0) 4))
+         (Ult N1:(Add w64 18446608564960100353 N0) 8)
+         (Slt 0
+              N2:(ZExt w32 (Read w8 (Extract w32 0 N1)
+                                    const_arr22)))
+         (Eq false
+             (Eq 0
+                 N3:(Read w8 (Extract w32 0 (Add w64 18446608564960100355 N0))
+                             const_arr22)))
+         (Slt N2 (ZExt w32 N3))
+         (Eq 13924095
+             (UDiv w32 (ReadLSB w32 N4:(Extract w32 0 (Add w64 18446608564960100354 N0)) const_arr22)
+                       32))]
+        false)

@@ -1,0 +1,4 @@
+/home/shafi/klee_build/bin/klee --external-calls=all -libc=uclibc --posix-runtime --smtlib-human-readable --write-test-info --write-paths --write-smt2s --write-cov --write-cvcs --write-kqueries --write-sym-paths --only-output-states-covering-new --use-query-log=solver:smt2 --simplify-sym-indices stase_driver.bc
+PID: 8760
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2024-05-16 10:49:18

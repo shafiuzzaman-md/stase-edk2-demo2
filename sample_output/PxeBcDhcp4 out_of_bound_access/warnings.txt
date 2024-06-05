@@ -1,0 +1,42 @@
+KLEE: WARNING: undefined reference to function: AllocateCopyPool
+KLEE: WARNING: undefined reference to function: AllocatePool
+KLEE: WARNING: undefined reference to function: AllocateZeroPool
+KLEE: WARNING: undefined reference to function: AsciiPrint
+KLEE: WARNING: undefined reference to function: AsmCpuid
+KLEE: WARNING: undefined reference to function: CompareGuid
+KLEE: WARNING: undefined reference to function: CompareMem
+KLEE: WARNING: undefined reference to function: CreateBasicVariablePolicy
+KLEE: WARNING: undefined reference to function: DebugAssert
+KLEE: WARNING: undefined reference to function: DebugPrint
+KLEE: WARNING: undefined reference to function: DebugPrintLevelEnabled
+KLEE: WARNING: undefined reference to function: EfiGetSystemConfigurationTable
+KLEE: WARNING: undefined reference to function: GetFirstHob
+KLEE: WARNING: undefined reference to function: IsVariablePolicyEnabled
+KLEE: WARNING: undefined reference to function: LShiftU64
+KLEE: WARNING: undefined reference to function: MmMemLibInternalCalculateMaximumSupportAddress
+KLEE: WARNING: undefined reference to function: MmMemLibInternalFreeMmramRanges
+KLEE: WARNING: undefined reference to function: MmMemLibInternalPopulateMmramRanges
+KLEE: WARNING: undefined reference to function: NetLibGetSystemGuid
+KLEE: WARNING: undefined reference to function: NetRandomInitSeed
+KLEE: WARNING: undefined reference to function: PxeBcCreateReplyObject
+KLEE: WARNING: undefined reference to function: PxeBcFlushStationIp
+KLEE: WARNING: undefined reference to function: PxeBcShowIp4Addr
+KLEE: WARNING: undefined reference to function: PxeBcUintnToAscDecWithFormat
+KLEE: WARNING: undefined reference to function: PxeBcVendorBootResponse
+KLEE: WARNING: undefined reference to function: RegisterVariablePolicy
+KLEE: WARNING: undefined reference to function: SetMem
+KLEE: WARNING: undefined reference to function: StrCmp
+KLEE: WARNING: undefined reference to function: SwapBytes16
+KLEE: WARNING: undefined reference to function: SwapBytes32
+KLEE: WARNING: undefined reference to function: VariableHaveTcgProtocols
+KLEE: WARNING: undefined reference to function: VariableServiceGetVariable
+KLEE: WARNING: undefined reference to function: VariableServiceSetVariable
+KLEE: WARNING: undefined reference to function: ZeroMem
+KLEE: WARNING ONCE: calling external: syscall(16, 0, 21505, 135536532520960) at klee/runtime/POSIX/fd.c:997 10
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling __klee_posix_wrapped_main with extra arguments.
+KLEE: WARNING ONCE: silently concretizing (reason: external call) expression (Add w32 4294967295
+          (ReadLSB w32 0 Private->SelectIndex)) to value 254 (./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:1101)
+KLEE: WARNING ONCE: calling external: printf(136731657502720, (Add w32 4294967295
+          (ReadLSB w32 0 Private->SelectIndex))) at ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:1101 31
+KLEE: WARNING ONCE: Symbolic memory access will send the following array of 44120 bytes to the constraint solver -- large symbolic arrays may cause significant performance issues: MO7757[44120] allocated at verifyPxeBcHandleDhcp4Offer():  %3 = call noalias i8* @malloc(i64 noundef 44120) #18, !dbg !4621

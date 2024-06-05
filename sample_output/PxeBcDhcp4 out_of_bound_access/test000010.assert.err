@@ -1,0 +1,15 @@
+Error: ASSERTION FAIL: arrayIndex >= 0 && arrayIndex < bitmapSize
+File: ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c
+Line: 246
+assembly.ll line: 14927
+State: 522
+Stack: 
+	#000014927 in PxeBcParseVendorOptions(symbolic, 136453508032640) at ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:246
+	#100015851 in PxeBcParseDhcp4Packet(136453508031088) at ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:586
+	#200015886 in PxeBcCopyDhcp4Ack(136453508018176, 136453508031088, 1) at ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:705
+	#300016811 in PxeBcHandleDhcp4Offer(136453508018176) at ./dynamic_harness/../demo2_edk2/NetworkPkg/UefiPxeBcDxe/PxeBcDhcp4.c:1221
+	#400018246 in verifyPxeBcHandleDhcp4Offer() at ./dynamic_harness/PxeBcdhcpHarness.c:34
+	#500018256 in __klee_posix_wrapped_main() at stase_driver.c:80
+	#600007490 in __user_main(1, 136747176427520, 136747176427536) at klee/runtime/POSIX/klee_init_env.c:245
+	#700000903 in __uClibc_main(136731330347008, 1, 136747176427520, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#800001068 in main(1, 136747176427520)
