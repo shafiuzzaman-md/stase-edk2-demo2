@@ -9,7 +9,7 @@ STASE uses cclyzerpp+Souffle tool for rule-based static analysis. Follow [these 
 
 ## Step-2: Clone Demo2 source code
 ```
-cd stase-edk2
+cd stase-edk2-demo2
 git clone <Your edk2 repo> (Assuming the direcroty name will be edk2)
 cd edk2
 git submodule update --init
