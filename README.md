@@ -48,7 +48,7 @@ STASE uses KLEE as the underlying symbolic execution engine. Follow [these steps
 
 ## Step-2: Clone edk2 source code inside stase-edk2 directory
 ```
-cd stase-edk2
+cd stase-edk2-demo2
 git clone <Your edk2 repo> (Assuming the direcroty name will be edk2)
 cd edk2
 cd ..
