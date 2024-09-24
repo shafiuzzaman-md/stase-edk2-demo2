@@ -221,6 +221,8 @@ PxeBcParseVendorOptions (
     }
   }
 
+
+
   if (!Iwc) {
     // Ensure there's enough data to safely extract a UINT32 index.  Necessary for safety
     if(Dhcp4Option->Length >= sizeof(UINT32)){
