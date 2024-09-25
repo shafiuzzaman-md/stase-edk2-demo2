@@ -84,3 +84,7 @@ klee --external-calls=all -libc=uclibc --posix-runtime --smtlib-human-readable  
 ```
 
 
+## Step-7: Copy the output
+```
+python3 copy_output.py
+```
